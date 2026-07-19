@@ -17,22 +17,23 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <aside className="self-start h-screen flex gap-9 flex-col p-5 pt-10">
                     <ul className="flex gap-2 flex-col">
                         <li><Link className={pathname === "/dashboard" ? "block w-40 bg-red-700 text-bold px-4 rounded text-white text-sm py-3": "block w-40 hover:bg-gray-200 text-bold px-4 text-sm rounded py-3" } href="/dashboard">Home</Link></li>
-                        <li><Link className={pathname === "/dashboard/todo" ? "block w-40 bg-[#9C29B2] text-bold text-sm px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm px-4 rounded py-3" } href="/dashboard/todo">Top Rated</Link></li>
-                        <li><Link className={pathname === "/dashboard/inprogress" ? "block w-40 bg-[#9C29B2] text-bold text-sm px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm px-4 rounded py-3" } href="/dashboard/inprogress">Trailers</Link></li>
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-[#9C29B2] text-bold text-sm px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm px-4 rounded py-3"} href="/dashboard/done">Coming Soon</Link></li>
+                        <li><Link className={pathname === "/dashboard/toprated" ? "block w-40 bg-red-700 text-bold text-sm px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm px-4 rounded py-3" } href="/dashboard/toprated">Top Rated</Link></li>
+                        <li><Link className={pathname === "/dashboard/trailer" ? "block w-40 bg-red-700 text-bold text-sm px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm px-4 rounded py-3" } href="/dashboard/trailer">Trailers</Link></li>
+                        <li><Link className={pathname === "/dashboard/comingsoon" ? "block w-40 bg-red-700 text-bold text-sm px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm px-4 rounded py-3"} href="/dashboard/comingsoon">Coming Soon</Link></li>
                     
                     </ul>
-                    <ul>
+                    <ul className="flex gap-2 flex-col">
                         {/* <li>Social</li> */}
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-[#9C29B2] text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Profile</Link></li>
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-[#9C29B2] text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Friends</Link></li>
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-[#9C29B2] text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Media</Link></li>
+                        <li><Link className={pathname === "/dashboard/action" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/action">Action</Link></li>
+                        <li><Link className={pathname === "/dashboard/romance" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/romance">Romance</Link></li>
+                        <li><Link className={pathname === "/dashboard/comedy" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/comedy">Comedy</Link></li>
+                        <li><Link className={pathname === "/dashboard/horror" ? "block w-40 bbg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/horror">Horror</Link></li>
                         
                     </ul>
 
-                    <ul>
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-[#9C29B2] text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Settings</Link></li>
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-[#9C29B2] text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Logout</Link></li>
+                    <ul className="flex gap-2 flex-col">
+                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Settings</Link></li>
+                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Logout</Link></li>
                     </ul>
                 </aside>
 

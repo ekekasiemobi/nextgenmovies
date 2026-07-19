@@ -9,21 +9,17 @@ async function Dashboard() {
   const BASE_URL = "https://api.themoviedb.org/3";
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
-  const response = await fetch(`${BASE_URL}/movie/top_rated?api_key=${API_KEY}`, {
+  // const response = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}`, {
+  //   method: "GET",
+  // });
+
+  const response = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}`, {
     method: "GET",
   });
-
-  const result = await fetch(`${BASE_URL}/movie/550/credits?api_key=${API_KEY}`, {
-    method: "GET",
-  });
-
   const data = await response.json();
-  const crew = await result.json();
-
-  const casts = crew.cast
   const items = data.results;
 
-  console.log(casts)
+  console.log(data)
 
   return (
     <>
@@ -42,7 +38,7 @@ async function Dashboard() {
 
         {/* <h1 className="text-3xl font-bold">Welcome Kassie; to your dashboard</h1> */}
         <div className="grid grid-cols-1 gap-3 mt-5">
-          {items.slice(7,8).map((item:any) => {
+          {items.slice(15,16).map((item:any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`
                 : "https://placehold.co/48x48/eeeeee/888888?text=No+Image";
@@ -71,34 +67,40 @@ async function Dashboard() {
           })}
           
         </div>
-        <h1 className="mt-10 text-1xl font-bold">Top Stars</h1>
+        <h1 className="mt-10 text-1xl font-bold">Trending Movies</h1>
         <div className="grid grid-cols-4 gap-3 mt-5">
-          {casts.slice(0,4).map((cast:any) => {
-              const imageSrc = cast.profile_path
-                ? `${IMAGE_BASE_URL}${cast.profile_path}`
+          {items.slice(0,4).map((item:any) => {
+              const imageSrc = item.poster_path || item.backdrop_path
+                ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`
                 : "https://placehold.co/48x48/eeeeee/888888?text=No+Image";
 
               return(
-                <div key={cast.id} className="">
+                <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-50 w-full rounded-lg" src={imageSrc} alt={cast.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-50 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
                     
                   </div>
         
-                  <div className="flex">
+                  <div className="flex justify-between">
                     <div>
-                      <p className="pt-3 font-bold text-sm">{cast.name}</p>
-                      <p className="text-sm">{cast.character}</p>
+                      <p className="pt-3 font-bold text-sm">{item.title}</p>
+                      <p className="text-sm">{item.release_date}</p>
                     </div>
+
+                    <div>
+                      <p className="pt-3 text-sm">{item.vote_average}</p>
+                      {/* <p className="pt-3 text-sm">{item.vote_count}</p> */}
+                    </div>
+              
                   </div>
                 </div>
               )
           })}
           
         </div>
-        <h1 className="mt-10 text-1xl font-bold">Similar Movies</h1>
+        <h1 className="mt-10 text-1xl font-bold">Recommended Movies</h1>
         <div className="grid grid-cols-4 gap-3 mt-5">
-          {items.slice(2,6).map((item:any) => {
+          {items.slice(10,14).map((item:any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`
                 : "https://placehold.co/48x48/eeeeee/888888?text=No+Image";
