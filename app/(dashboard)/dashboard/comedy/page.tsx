@@ -46,7 +46,7 @@ async function Comedy() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-70 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-80 w-full rounded-lg object-cover object-bottom" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={193} />
                     
                   </div>
         
@@ -77,7 +77,7 @@ async function Comedy() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-50 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-50 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
                     
                   </div>
         

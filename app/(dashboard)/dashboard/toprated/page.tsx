@@ -32,15 +32,15 @@ async function Dashboard() {
 
         {/* <h1 className="text-3xl font-bold">Welcome Kassie; to your dashboard</h1> */}
         <div className="grid grid-cols-1 gap-3 mt-5">
-          {items.slice(14,15).map((item:any) => {
+          {items.slice(5,6).map((item:any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`
                 : "https://placehold.co/48x48/eeeeee/888888?text=No+Image";
 
               return(
                 <div key={item.id} className="">
-                  <div className="flex justify-between items-center">
-                    <Image className=" h-70 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                  <div className="h-80 w-full overflow-hidden rounded-lg">
+                    <Image className="h-full w-full object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={193} />
                     
                   </div>
         
@@ -71,7 +71,7 @@ async function Dashboard() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-50 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-50 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
                     
                   </div>
         
@@ -102,7 +102,7 @@ async function Dashboard() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-50 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-50 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
                     
                   </div>
         

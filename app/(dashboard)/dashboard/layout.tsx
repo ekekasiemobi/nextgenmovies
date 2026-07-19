@@ -27,13 +27,13 @@ function Layout({ children }: { children: React.ReactNode }) {
                         <li><Link className={pathname === "/dashboard/action" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/action">Action</Link></li>
                         <li><Link className={pathname === "/dashboard/romance" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/romance">Romance</Link></li>
                         <li><Link className={pathname === "/dashboard/comedy" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/comedy">Comedy</Link></li>
-                        <li><Link className={pathname === "/dashboard/horror" ? "block w-40 bbg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/horror">Horror</Link></li>
+                        <li><Link className={pathname === "/dashboard/horror" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/horror">Horror</Link></li>
                         
                     </ul>
 
                     <ul className="flex gap-2 flex-col">
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Settings</Link></li>
-                        <li><Link className={pathname === "/dashboard/done" ? "block w-40 bg-red-700 text-bold text-sm  px-4 rounded text-white py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard/done">Logout</Link></li>
+                        <li><Link className={pathname === "/dashboard" ? "block w-40 text-bold text-sm  px-4 rounded text-black py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard">Settings</Link></li>
+                        <li><Link className={pathname === "/dashboard" ? "block w-40 text-bold text-sm  px-4 rounded text-black py-3": "block w-40 hover:bg-gray-200 text-bold text-sm  px-4 rounded py-3"} href="/dashboard">Logout</Link></li>
                     </ul>
                 </aside>
 

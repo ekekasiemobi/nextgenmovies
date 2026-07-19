@@ -38,7 +38,7 @@ async function Horror() {
 
         {/* <h1 className="text-3xl font-bold">Welcome Kassie; to your dashboard</h1> */}
         <div className="grid grid-cols-1 gap-3 mt-5">
-          {items.filter((item: any) => item.genre_ids.includes(27)).slice(0,1).map((item:any) => {
+          {items.filter((item: any) => item.genre_ids.includes(27)).slice(2,3).map((item:any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`
                 : "https://placehold.co/48x48/eeeeee/888888?text=No+Image";
@@ -46,7 +46,7 @@ async function Horror() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-70 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-80 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={193} />
                     
                   </div>
         
@@ -77,7 +77,7 @@ async function Horror() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-50 w-full rounded-lg" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-50 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
                     
                   </div>
         
