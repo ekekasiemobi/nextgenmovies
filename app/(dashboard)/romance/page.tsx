@@ -46,7 +46,7 @@ async function Romance() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-80 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={193} />
+                    <Image className=" h-80 w-full rounded-lg object-cover object-center cursor-pointer" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={193} />
                     
                   </div>
         
@@ -77,7 +77,7 @@ async function Romance() {
               return(
                 <div key={item.id} className="">
                   <div className="flex justify-between items-center">
-                    <Image className=" h-50 w-full rounded-lg object-cover object-center" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
+                    <Image className=" h-50 w-full rounded-lg object-cover object-center cursor-pointer" src={imageSrc} alt={item.title || "Movie poster"} width={308} height={50} />
                     
                   </div>
         

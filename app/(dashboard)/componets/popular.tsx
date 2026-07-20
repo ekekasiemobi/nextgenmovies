@@ -35,14 +35,9 @@ export default function PopularMovies() {
 
                     return (
                         <div key={item.id} className="border-b border-gray-100 pb-3">
-                            <div className="flex gap-3 items-center">
+                            <div className="flex gap-3 items-center cursor-pointer">
                                 <Image 
-                                    className="rounded object-cover h-20 w-14" 
-                                    src={imageSrc} 
-                                    alt={item.title || "Movie poster"} 
-                                    width={56} 
-                                    height={80} 
-                                />
+                                    className="rounded object-cover h-20 w-14 cursor-pointer" src={imageSrc} alt={item.title || "Movie poster"} width={56} height={80} />
                                 <div>
                                     <p className="text-sm font-semibold">{item.title}</p>
                                     <p className="text-xs text-gray-500 font-normal mt-1">{item.release_date}</p>
@@ -53,7 +48,7 @@ export default function PopularMovies() {
                 })}
             </div>
             <div>
-                <button className="px-6 self-start w-full py-3 bg-red-700 text-white rounded">See More</button>
+                <button className="px-6 self-start w-full py-3 bg-red-700 text-white rounded cursor-pointer">See More</button>
             </div>
         </aside>
     );
