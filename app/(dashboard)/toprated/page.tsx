@@ -62,7 +62,7 @@ async function Dashboard() {
           
         </div>
         <h1 className="mt-10 text-1xl font-bold">Trending Movies</h1>
-        <div className="grid grid-cols-4 gap-3 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mt-5">
           {items.slice(0,4).map((item:any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`
@@ -93,7 +93,7 @@ async function Dashboard() {
           
         </div>
         <h1 className="mt-10 text-1xl font-bold">Recommended Movies</h1>
-        <div className="grid grid-cols-4 gap-3 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mt-5">
           {items.slice(10,14).map((item:any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`

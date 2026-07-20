@@ -68,7 +68,7 @@ async function Comedy() {
           
         </div>
         <h1 className="mt-10 text-1xl font-bold">Similar Movies</h1>
-        <div className="grid grid-cols-4 gap-3 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mt-5">
          {items.filter((item: any) => item.genre_ids.includes(35)).map((item: any) => {
               const imageSrc = item.poster_path || item.backdrop_path
                 ? `${IMAGE_BASE_URL}${item.poster_path || item.backdrop_path}`

@@ -43,7 +43,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                     <div>{children}</div>
                 </div>
 
-                <div className=" self-start overflow-aut mt-5 p-5 font-bold bg-white">
+                <div className=" hidden md:block self-start overflow-aut mt-5 p-5 font-bold bg-white">
                     <h1>Popular Movies</h1>
                      <PopularMovies />
 
