@@ -13,7 +13,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <>
         <div className="">
 
-            <div className="grid grid-cols-[15vw_1fr_20vw] bg-white min-h-screen items-start">
+            <div className="grid grid-cols-[15vw_1fr] md:grid-cols-[15vw_1fr_20vw] bg-white min-h-screen items-start">
                 <aside className="self-start h-screen flex gap-9 flex-col p-5 pt-10">
                     <ul className="flex gap-2 flex-col">
                         <li><Link className={pathname === "/" ? "block w-40 bg-red-700 text-bold px-4 rounded text-white text-sm py-3": "block w-40 hover:bg-gray-200 text-bold px-4 text-sm rounded py-3" } href="/">Home</Link></li>
